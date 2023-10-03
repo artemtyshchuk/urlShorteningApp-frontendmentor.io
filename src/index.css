@@ -1,0 +1,30 @@
+@import-normalize;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --buttons-color: #2bd0d0;
+  --violet-dark: #34313d;
+  --violet-normal: #3a3054;
+  --violet-light: #4b3f6b;
+}
+
+body {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-family: "Poppins", monospace;
+}
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}

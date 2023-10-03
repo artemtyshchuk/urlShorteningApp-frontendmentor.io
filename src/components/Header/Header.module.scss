@@ -1,0 +1,61 @@
+.header {
+  margin-top: 48px;
+}
+
+.headerWrapper {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 0.5fr 220px;
+  justify-content: space-between;
+}
+
+.left {
+  display: grid;
+  grid-auto-flow: column;
+}
+.right {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.logo {
+  margin-right: 15px;
+}
+
+.headerButtons {
+  padding-left: 29px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: center;
+  justify-self: end;
+
+  color: #9e9aa8;
+  cursor: pointer;
+  &:hover {
+    color: var(--violet-dark);
+  }
+}
+
+.signUpButton {
+  border-radius: 28px;
+  background: var(--buttons-color);
+  border: 3px solid #2acfcf;
+  width: 105px;
+  height: 40px;
+
+  justify-self: end;
+  margin-left: 37px;
+
+  color: #fff;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  &:hover {
+    background: #9ae3e3;
+    border: #9ae3e3;
+  }
+}
