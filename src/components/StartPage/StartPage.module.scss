@@ -1,0 +1,56 @@
+.startPage {
+}
+
+.startPageWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 565px;
+}
+
+.title {
+  margin-top: 145px;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90px;
+  letter-spacing: -2px;
+  color: var(--violet-dark);
+}
+
+.subtitle {
+  margin-top: 5px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+  color: var(--violet-light);
+}
+
+.startPageButton {
+  margin-top: 52px;
+  width: 197px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--buttons-color);
+  border: 3px solid #2acfcf;
+
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  &:hover {
+    background: #9ae3e3;
+    border: #9ae3e3;
+  }
+}
+
+.startPageImage {
+  margin-top: 86px;
+  left: 55%;
+  position: absolute;
+  z-index: -1;
+}
