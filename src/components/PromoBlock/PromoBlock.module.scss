@@ -1,0 +1,47 @@
+.promoBlock {
+  background: #3a3054;
+  background-image: url("../../assets/images/bg-boost-desktop.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promoBlockTitle {
+  padding-top: 57px;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+}
+
+.centerButton {
+  text-align: center;
+}
+
+.promoBlockButton {
+  margin-top: 32px;
+  margin-bottom: 57px;
+  width: 197px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--buttons-color);
+  border: 3px solid #2acfcf;
+
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  &:hover {
+    background: #9ae3e3;
+    border: #9ae3e3;
+  }
+}

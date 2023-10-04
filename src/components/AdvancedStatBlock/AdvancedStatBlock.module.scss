@@ -1,0 +1,89 @@
+.advancedStatBlock {
+  background: #eff1f7;
+}
+
+.title {
+  padding-top: 120px;
+  color: var(--violet-dark);
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 18px;
+  color: #9e9aa8;
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.123px;
+  text-align: center;
+}
+
+.advancedStatBlockWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  padding-bottom: 120px;
+}
+
+.extraBlock {
+  position: relative;
+  margin-top: 100px;
+  width: 350px;
+  height: 267px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  top: 251px;
+  background: var(--buttons-color);
+}
+
+.circleWithIcon {
+  position: absolute;
+  top: -45px;
+  left: 32px;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--violet-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.extraBlockTitle {
+  margin-top: 77px;
+  padding-left: 32px;
+
+  color: var(--violet-dark);
+  font-family: "Poppins";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.extraBlockDescr {
+  padding: 12px 32px 41px 32px;
+  color: #9e9aa8;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+}

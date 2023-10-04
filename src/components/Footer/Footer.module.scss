@@ -1,0 +1,66 @@
+.footer {
+  background: #232127;
+}
+
+.footerWrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-bottom: 72px;
+}
+
+.logoImage {
+  margin-top: 71px;
+}
+
+.extraInfoWrapper {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 75px;
+}
+
+.mainWrapper {
+  display: grid;
+  justify-content: center;
+}
+
+.mainButton {
+  padding-bottom: 12px;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.25px;
+}
+
+.regularButton {
+  padding-top: 10px;
+  color: #bfbfbf;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.234px;
+  cursor: pointer;
+  &:hover {
+    color: var(--buttons-color);
+  }
+}
+
+.iconsWrapper {
+  margin-top: 73px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 24px;
+  justify-content: end;
+}
+
+.footerIcon {
+  cursor: pointer;
+  &:hover path {
+    fill: var(--buttons-color);
+  }
+}

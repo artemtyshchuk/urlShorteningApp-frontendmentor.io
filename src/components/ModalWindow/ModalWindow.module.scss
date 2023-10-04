@@ -1,0 +1,85 @@
+.modalWindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalWindowWrapper {
+  position: static;
+  margin: 0 auto;
+  width: 498px;
+  height: 176px;
+  background: #3a3054;
+  border-radius: 10px;
+  text-align: center;
+  padding: 24px 48px;
+}
+
+.descr {
+  font-size: 16px;
+  color: #fff;
+  font-family: "Poppins";
+  line-height: 1.75;
+}
+
+.modalWindowButton {
+  margin-top: 16px;
+  width: 197px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--buttons-color);
+  border: 3px solid #2acfcf;
+
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+  &:hover {
+    background: #9ae3e3;
+    border: #9ae3e3;
+  }
+}
+
+.closeButtonWrapper {
+  position: absolute;
+  width: 24px; /* Ширина кнопки */
+  height: 24px; /* Высота кнопки */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.closeButton {
+  position: absolute;
+  top: -142px;
+  left: 420px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.closeButton::before,
+.closeButton::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%; /* Ширина полоски крестика */
+  height: 4px; /* Толщина полоски крестика */
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.closeButton::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

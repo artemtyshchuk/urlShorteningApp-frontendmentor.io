@@ -1,11 +1,13 @@
 .urlBlock {
   margin-top: 150px;
   width: 100%;
+  background: linear-gradient(to bottom, #ffffff 50%, #eff1f7 50%);
 }
 
 .urlBlockWrapper {
   display: grid;
   background: var(--violet-normal);
+  background-image: url("../../assets/images/bg-shorten-desktop.svg");
   align-content: center;
   justify-content: center;
   border-radius: 10px;
