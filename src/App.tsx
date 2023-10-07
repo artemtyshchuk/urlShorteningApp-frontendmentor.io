@@ -1,10 +1,11 @@
 import { AdvancedStatBlock } from "components/AdvancedStatBlock";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
+import { LinkList } from "components/LinkList";
 import { ModalWindow } from "components/ModalWindow";
 import { PromoBlock } from "components/PromoBlock";
 import { StartPage } from "components/StartPage";
-import { UrlBlock } from "components/UrlBlock";
+import { NewLink } from "components/UrlBlock/AsyncUrlBlock";
 import { useAppSelector } from "redux-hooks";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <Header />
       <StartPage />
       {modal === "open" ? <ModalWindow /> : ""}
-      <UrlBlock />
+      <NewLink />
+      <LinkList />
       <AdvancedStatBlock />
       <PromoBlock />
       <Footer />

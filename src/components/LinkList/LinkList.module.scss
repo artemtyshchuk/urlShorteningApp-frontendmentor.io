@@ -1,0 +1,101 @@
+.linkList {
+  padding-top: 24px;
+  background: #eff1f7;
+}
+
+.text {
+  position: relative;
+  background: white;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-content: center;
+  height: 72px;
+  border-radius: 5px;
+  &:hover {
+    .closeButton {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #f46262;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      opacity: 1;
+      width: 26px;
+      height: 26px;
+      font-size: 16px;
+      font-weight: bold;
+      padding-top: 3px;
+      padding-left: 0px;
+      cursor: pointer;
+    }
+    .closeButton::before,
+    .closeButton::after {
+      content: "";
+      position: absolute;
+      width: 4px;
+      height: 12px;
+      background-color: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .closeButton::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .closeButton::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.link {
+  padding-left: 32px;
+  color: var(--violet-dark);
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+}
+
+.resultWrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.result {
+  color: var(--buttons-color);
+  text-align: right;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0.15px;
+}
+
+.copyButton {
+  margin: 0 24px;
+  width: 103px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: var(--buttons-color);
+  border: 3px solid var(--buttons-color);
+  cursor: pointer;
+
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  &:hover {
+    background: #9ae3e3;
+    border: #9ae3e3;
+  }
+}
