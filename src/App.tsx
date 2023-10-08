@@ -10,6 +10,7 @@ import { useAppSelector } from "redux-hooks";
 
 function App() {
   const modal = useAppSelector((state) => state.modal);
+  // const list = useAppSelector(state => state.link.list)
 
   return (
     <>
@@ -17,7 +18,7 @@ function App() {
       <StartPage />
       {modal === "open" ? <ModalWindow /> : ""}
       <NewLink />
-      <LinkList />
+      <LinkList result={[]} />
       <AdvancedStatBlock />
       <PromoBlock />
       <Footer />

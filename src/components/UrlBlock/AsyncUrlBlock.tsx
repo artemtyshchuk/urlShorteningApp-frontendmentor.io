@@ -5,9 +5,9 @@ import { createLink } from "features/link/link-slice";
 export const NewLink = () => {
   const dispatch = useAppDispatch();
 
-  const handleNewTodo = (title: string) => {
+  const handleNewLink = (title: string) => {
     dispatch(createLink(title));
   };
 
-  return <UrlBlock handleClick={handleNewTodo} />;
+  return <UrlBlock handleClick={handleNewLink} />;
 };

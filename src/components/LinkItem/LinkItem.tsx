@@ -5,14 +5,15 @@ import { Link } from "types";
 
 interface LinkItemProps extends Link {
   removeLink: (result: Link["result"]) => void;
+  key: string;
 }
 
-export const LinkItem = ({ result }: LinkItemProps) => {
+export const LinkItem = ({ ok, result, removeLink, key }: LinkItemProps) => {
   const dispatch = useAppDispatch();
 
-  // const handleRemoveLink = () => {
-  //   dispatch(removeLink(result.code));
-  // };
+  const handleRemoveLink = () => {
+    dispatch(() => {});
+  };
 
   return (
     <div className={styles.linkItem}>
@@ -25,7 +26,7 @@ export const LinkItem = ({ result }: LinkItemProps) => {
           </div>
           <span
             className={styles.closeButton}
-            onClick={() => removeLink(result.code)}
+            onClick={handleRemoveLink}
           ></span>
         </div>
       </div>

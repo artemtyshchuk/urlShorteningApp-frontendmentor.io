@@ -10,13 +10,13 @@ export const createLink = createAsyncThunk<
 });
 
 type LinkSlice = {
-  list: Link[];
+  list: Link[] | null;
   status: Status;
   error: string | null;
 };
 
 const initialState: LinkSlice = {
-  list: [],
+  list: null,
   status: "idle",
   error: null,
 };
@@ -26,15 +26,19 @@ export const linkSlice = createSlice({
   initialState,
   reducers: {
     removeLink: (state, action: PayloadAction<string>) => {
-      state.list = state.list.filter(
-        (link) => link.result.code !== action.payload
-      );
+      if (state.list) {
+        state.list = state.list.filter(
+          (link) => link.result.code !== action.payload
+        );
+        state.list = [...state.list];
+      }
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(createLink.pending, (state, action) => {
         state.status = "loading";
+        state.error = null;
       })
       .addCase(createLink.fulfilled, (state, action) => {
         state.status = "received";
@@ -42,6 +46,7 @@ export const linkSlice = createSlice({
       })
       .addCase(createLink.rejected, (state, action) => {
         state.status = "rejected";
+        state.error = "Error!";
       });
   },
 });

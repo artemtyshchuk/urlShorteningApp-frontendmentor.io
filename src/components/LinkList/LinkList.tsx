@@ -5,26 +5,29 @@ import { LinkItem } from "components/LinkItem";
 import { removeLink } from "features/link/link-slice";
 import { Link } from "types";
 
-interface LinkListProps {}
+interface LinkListProps {
+  result: Link[];
+}
 
-export const LinkList = ({}: LinkListProps) => {
-  const { list } = useAppSelector(linkSelector);
+export const LinkList = ({ result }: LinkListProps) => {
+  const list: Link[] | null = useAppSelector(linkSelector);
   const dispatch = useAppDispatch();
 
   const handleRemoveLink = (result: Link["result"]) => {
     dispatch(removeLink(result.code));
   };
+
   return (
     <ul>
-      {list.map((link) => {
-        return (
-          <LinkItem
-            key={link.result.code}
-            removeLink={handleRemoveLink}
-            {...link}
-          />
-        );
-      })}
+      {Array.isArray(list)
+        ? list.map((link) => (
+            <LinkItem
+              key={link.result.code}
+              removeLink={handleRemoveLink}
+              {...link}
+            />
+          ))
+        : null}
     </ul>
   );
 };
