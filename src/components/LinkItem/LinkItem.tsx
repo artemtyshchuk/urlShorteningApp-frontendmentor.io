@@ -11,22 +11,18 @@ interface LinkItemProps extends Link {
 export const LinkItem = ({ ok, result, removeLink, key }: LinkItemProps) => {
   const dispatch = useAppDispatch();
 
-  const handleRemoveLink = () => {
-    dispatch(() => {});
-  };
-
   return (
     <div className={styles.linkItem}>
       <div className="container">
         <div className={styles.text}>
-          <p className={styles.link}>{result.originalLink}</p>
+          <p className={styles.link}>{result.original_link}</p>
           <div className={styles.resultWrapper}>
-            <p className={styles.result}>{result.shortLink}</p>
+            <p className={styles.result}>{result.short_link}</p>
             <button className={styles.copyButton}>Copy</button>
           </div>
           <span
             className={styles.closeButton}
-            onClick={handleRemoveLink}
+            onClick={() => removeLink(result)}
           ></span>
         </div>
       </div>

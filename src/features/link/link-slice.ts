@@ -2,7 +2,7 @@ import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Extra, Link, Status } from "types";
 
 export const createLink = createAsyncThunk<
-  { data: Link[] },
+  { data: Link },
   string,
   { extra: Extra }
 >("@@link/create-link", (originalLink, { extra: { client, api } }) => {
@@ -10,7 +10,7 @@ export const createLink = createAsyncThunk<
 });
 
 type LinkSlice = {
-  list: Link[] | null;
+  list: Link | null;
   status: Status;
   error: string | null;
 };
@@ -27,10 +27,7 @@ export const linkSlice = createSlice({
   reducers: {
     removeLink: (state, action: PayloadAction<string>) => {
       if (state.list) {
-        state.list = state.list.filter(
-          (link) => link.result.code !== action.payload
-        );
-        state.list = [...state.list];
+        return initialState;
       }
     },
   },

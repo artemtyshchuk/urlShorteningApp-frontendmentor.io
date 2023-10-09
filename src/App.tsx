@@ -18,7 +18,7 @@ function App() {
       <StartPage />
       {modal === "open" ? <ModalWindow /> : ""}
       <NewLink />
-      <LinkList result={[]} />
+      <LinkList />
       <AdvancedStatBlock />
       <PromoBlock />
       <Footer />
