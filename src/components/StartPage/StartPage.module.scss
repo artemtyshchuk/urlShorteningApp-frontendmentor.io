@@ -42,9 +42,45 @@
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
+  animation: bn53bounce 4s infinite;
   &:hover {
     background: #9ae3e3;
     border: #9ae3e3;
+  }
+}
+
+@keyframes bn53bounce {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1) rotate(-5deg);
+  }
+
+  25% {
+    transform: scale(1) rotate(5deg);
+  }
+
+  30% {
+    transform: scale(1) rotate(-3deg);
+  }
+
+  35% {
+    transform: scale(1) rotate(2deg);
+  }
+
+  40% {
+    transform: scale(1) rotate(0);
   }
 }
 

@@ -2,22 +2,67 @@ import styles from "./AdvancedStatBlock.module.scss";
 import { ReactComponent as BrandRecognitionIcon } from "assets/images/icon-brand-recognition.svg";
 import { ReactComponent as DetailedRecordsIcon } from "assets/images/icon-detailed-records.svg";
 import { ReactComponent as FullyCustomizableIcon } from "assets/images/icon-fully-customizable.svg";
+import { motion } from "framer-motion";
 
-interface AdvancedStatBlockProps {}
+export const AdvancedStatBlock = () => {
+  const topAnimation = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: (custom: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.3 },
+    }),
+  };
 
-export const AdvancedStatBlock = ({}: AdvancedStatBlockProps) => {
+  const animation = {
+    hidden: {
+      y: 0,
+      opacity: 0,
+    },
+    visible: (custom: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.3 },
+    }),
+  };
+
   return (
-    <div className={styles.advancedStatBlock}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      className={styles.advancedStatBlock}
+    >
       <div className="container">
-        <p className={styles.title}>Advanced Statistics</p>
-        <p className={styles.subtitle}>
+        <motion.p custom={1} variants={topAnimation} className={styles.title}>
+          Advanced Statistics
+        </motion.p>
+        <motion.p
+          custom={1}
+          variants={topAnimation}
+          className={styles.subtitle}
+        >
           Track how your links are performing across the web with
           <br />
           our advanced statistics dashboard.
-        </p>
+        </motion.p>
 
-        <div className={styles.advancedStatBlockWrapper}>
-          <span className={styles.line}></span>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          className={styles.advancedStatBlockWrapper}
+          custom={2}
+          variants={topAnimation}
+        >
+          <motion.span
+            className={styles.line}
+            custom={5}
+            variants={animation}
+          ></motion.span>
           <div className={styles.extraBlock}>
             <div className={styles.circleWithIcon}>
               <BrandRecognitionIcon className={styles.circleIcon} />
@@ -30,7 +75,12 @@ export const AdvancedStatBlock = ({}: AdvancedStatBlockProps) => {
             </p>
           </div>
 
-          <div className={styles.extraBlock} style={{ marginTop: "144px" }}>
+          <motion.div
+            className={styles.extraBlock}
+            style={{ marginTop: "144px" }}
+            custom={3}
+            variants={topAnimation}
+          >
             <div className={styles.circleWithIcon}>
               <DetailedRecordsIcon className={styles.circleIcon} />
             </div>
@@ -40,9 +90,14 @@ export const AdvancedStatBlock = ({}: AdvancedStatBlockProps) => {
               where people engage with your content helps inform better
               decisions.
             </p>
-          </div>
+          </motion.div>
 
-          <div className={styles.extraBlock} style={{ marginTop: "188px" }}>
+          <motion.div
+            className={styles.extraBlock}
+            style={{ marginTop: "188px" }}
+            custom={4}
+            variants={topAnimation}
+          >
             <div className={styles.circleWithIcon}>
               <FullyCustomizableIcon className={styles.circleIcon} />
             </div>
@@ -51,9 +106,9 @@ export const AdvancedStatBlock = ({}: AdvancedStatBlockProps) => {
               Improve brand awareness and content discoverability through
               customizable links, supercharging audience engagement.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
