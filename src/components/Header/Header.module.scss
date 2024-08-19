@@ -9,6 +9,11 @@
   justify-content: space-between;
 }
 
+.headerButtonsContainer {
+  display: grid;
+  grid-auto-flow: column;
+}
+
 .left {
   display: grid;
   grid-auto-flow: column;
@@ -16,6 +21,7 @@
 .right {
   display: grid;
   grid-auto-flow: column;
+  justify-content: center;
 }
 
 .logo {
@@ -57,5 +63,49 @@
   &:hover {
     background: #9ae3e3;
     border: #9ae3e3;
+  }
+}
+.burger {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  //993
+}
+
+@media (max-width: 992px) {
+  //769
+}
+
+@media (max-width: 768px) {
+  //577
+  .headerButtons {
+    padding-left: 15px;
+  }
+  .signUpButton {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .headerButtons {
+    display: none;
+  }
+  .headerWrapper {
+    grid-template-columns: 1fr;
+  }
+  .left {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .right {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
   }
 }

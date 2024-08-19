@@ -83,3 +83,25 @@
 .closeButton::before {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
+
+@media (max-width: 1439px) {
+  //1201
+}
+
+@media (max-width: 1200px) {
+  //993
+}
+
+@media (max-width: 992px) {
+  //769
+}
+
+@media (max-width: 768px) {
+  //577
+  .modalWindow {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+}

@@ -5,6 +5,9 @@ import { ReactComponent as FullyCustomizableIcon } from "assets/images/icon-full
 import { motion } from "framer-motion";
 
 export const AdvancedStatBlock = () => {
+  const isSmallScreen = window.matchMedia("(max-width: 1200px)").matches;
+  const tabletScreen = window.matchMedia("(max-width: 768px)").matches;
+
   const topAnimation = {
     hidden: {
       y: 100,
@@ -77,7 +80,7 @@ export const AdvancedStatBlock = () => {
 
           <motion.div
             className={styles.extraBlock}
-            style={{ marginTop: "144px" }}
+            style={{ marginTop: tabletScreen ? "10px" : "144px" }}
             custom={3}
             variants={topAnimation}
           >
@@ -94,7 +97,7 @@ export const AdvancedStatBlock = () => {
 
           <motion.div
             className={styles.extraBlock}
-            style={{ marginTop: "188px" }}
+            style={{ marginTop: isSmallScreen ? "10px" : "188px" }}
             custom={4}
             variants={topAnimation}
           >

@@ -87,3 +87,45 @@
   font-weight: 500;
   line-height: 26px;
 }
+
+@media (max-width: 1200px) {
+  //993
+  .advancedStatBlockWrapper {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  //769
+}
+
+@media (max-width: 768px) {
+  //577
+  .advancedStatBlockWrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    padding-bottom: 120px;
+  }
+  .line {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .advancedStatBlockWrapper {
+    padding-bottom: 50px;
+  }
+
+  .extraBlock {
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+    height: 267px;
+    border-radius: 5px;
+    background: #fff;
+  }
+}

@@ -90,3 +90,73 @@
   position: absolute;
   z-index: -1;
 }
+
+@media (max-width: 1439px) {
+  //1201
+  .startPageImage {
+    margin-top: 86px;
+    left: 33%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  //993
+  .startPageImage {
+    margin-top: 162px;
+    left: 22%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 992px) {
+  //769
+  .title {
+    margin-top: 140px;
+  }
+  .startPageImage {
+    margin-top: 45px;
+    left: -4%;
+  }
+  .startPageButton {
+    border: 3px solid #176868;
+  }
+}
+
+@media (max-width: 768px) {
+  //577
+  .startPageImage {
+    display: none;
+    width: 577px;
+    position: static;
+    bottom: 50%;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .startPageWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .startPageImage {
+    position: fixed;
+    top: 10%;
+    z-index: -1;
+  }
+
+  .title {
+    margin-top: 89px;
+    font-size: 36px;
+    line-height: 41px;
+  }
+
+  .subtitle {
+    margin-top: 36px;
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
